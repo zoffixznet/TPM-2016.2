@@ -1,4 +1,6 @@
-
+* {
+    hyphens: manual!important;
+}
 .module {
     color: #44c;
     background: none;
