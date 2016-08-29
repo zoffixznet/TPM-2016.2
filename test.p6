@@ -1,6 +1,5 @@
 use Crypt::Bcrypt;
-my @passes = rand.Str xx 32;
-say @passes».&bcrypt-hash: :12rounds;
+say (rand.Str xx 32)».&bcrypt-hash: :12rounds;
 =finish
 
 sub slow-stuff {

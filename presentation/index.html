@@ -269,7 +269,7 @@
 					<h2>32-cores: 3.1 seconds to run</h2>
 					<hr>
 					<h2 style="font-size: 300%"
-						>2,000% faster with just<br> 2 extra words of code</h2>
+						>2,000% faster with just<br> 2 extra <u>words</u> of code</h2>
 
 				</section>
 
@@ -314,7 +314,7 @@
 						use Crypt::Bcrypt;
 						my @passes = rand.Str xx 32;
 
-						my @hashes = @passes<mark>.race</mark>.map: { bcrypt-hash $^pass, :12rounds };
+						my @hashes = @passes<mark>.race</mark>.map: { bcrypt-hash $^pass, :15rounds };
 						say @hashes;
 					</code></pre>
 				</section>
@@ -334,6 +334,25 @@
         </section>
 
 				<section>
+					<h2>Make it shorter!</h2>
+
+					<pre><code class="perl" data-noescape>
+						use Crypt::Bcrypt;
+						my @passes = rand.Str xx 32;
+						say @passes».&amp;bcrypt-hash: :15rounds;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>SHOOOORTER!</h2>
+
+					<pre><code class="perl" data-noescape>
+						use Crypt::Bcrypt;
+						say (rand.Str xx 32)».&amp;bcrypt-hash: :15rounds;
+					</code></pre>
+				</section>
+
+				<section>
 					<h2>
 							2016: Single-Threaded<br>
 							2018: Auto-Threaded
@@ -341,8 +360,7 @@
 
 					<pre><code class="perl" data-noescape>
 						use Crypt::Bcrypt;
-						my @passes = rand.Str xx 32;
-						say @passes».&bcrypt-hash: :12rounds;
+						say (rand.Str xx 32)».&amp;bcrypt-hash: :15rounds;
 					</code></pre>
 
 					<p>Let the compiler figure this stuff out.</p>
