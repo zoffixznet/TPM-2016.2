@@ -69,30 +69,30 @@
 					<h2>Hash Some Passwords</h2>
 
 					<pre><code class="perl">
-						use Crypt::Bcrypt;
-						my @passes = rand.Str xx 32;
+ use Crypt::Bcrypt;
+ my @passes = rand.Str xx 32;
 
-						my @hashes;
-						for @passes {
-						    @hashes.push: bcrypt-hash $^pass, :15rounds;
-						}
-						say @hashes;
+ my @hashes;
+ for @passes {
+     @hashes.push: bcrypt-hash $^pass, :15rounds;
+ }
+ say @hashes;
 					</code></pre>
 					<h2>&nbsp;</h2>
 				</section>
 
 				<section>
-					<h2>Hash Some Passwords</h2>
+					<h2>Slow on purpose</h2>
 
 					<pre><code class="perl">
-						use Crypt::Bcrypt;
-						my @passes = rand.Str xx 32;
+ use Crypt::Bcrypt;
+ my @passes = rand.Str xx 32;
 
-						my @hashes;
-						for @passes {
-						    @hashes.push: bcrypt-hash $^pass, :15rounds;
-						}
-						say @hashes;
+ my @hashes;
+ for @passes {
+     @hashes.push: bcrypt-hash $^pass, :15rounds;
+ }
+ say @hashes;
 					</code></pre>
 					<h2>Takes 63 seconds to run</h2>
 				</section>
@@ -190,14 +190,14 @@
 					<h2>Program = 1 core</h2>
 
 					<pre><code class="perl">
-						use Crypt::Bcrypt;
-						my @passes = rand.Str xx 32;
+ use Crypt::Bcrypt;
+ my @passes = rand.Str xx 32;
 
-						my @hashes;
-						for @passes {
-						    @hashes.push: bcrypt-hash $^pass, :15rounds;
-						}
-						say @hashes;
+ my @hashes;
+ for @passes {
+     @hashes.push: bcrypt-hash $^pass, :15rounds;
+ }
+ say @hashes;
 					</code></pre>
 				</section>
 
@@ -251,14 +251,14 @@
 					<h2>Multi-Threaded</h2>
 
 					<pre><code class="perl" data-noescape>
-						use Crypt::Bcrypt;
-						my @passes = rand.Str xx 32;
+ use Crypt::Bcrypt;
+ my @passes = rand.Str xx 32;
 
-						my @hashes;
-						for @passes {
-						    @hashes.push: <mark>start</mark> bcrypt-hash $^pass, :15rounds;
-						}
-						say <mark>await</mark> @hashes;
+ my @hashes;
+ for @passes {
+     @hashes.push: <mark>start</mark> bcrypt-hash $^pass, :15rounds;
+ }
+ say <mark>await</mark> @hashes;
 					</code></pre>
 				</section>
 
@@ -283,14 +283,14 @@
 					<h2>Rewrite To Be Shorter</h2>
 
 					<pre><code class="perl">
-						use Crypt::Bcrypt;
-						my @passes = rand.Str xx 32;
+ use Crypt::Bcrypt;
+ my @passes = rand.Str xx 32;
 
-						my @hashes;
-						for @passes {
-						    @hashes.push: bcrypt-hash $^pass, :15rounds;
-						}
-						say @hashes;
+ my @hashes;
+ for @passes {
+     @hashes.push: bcrypt-hash $^pass, :15rounds;
+ }
+ say @hashes;
 					</code></pre>
 					<h2>&nbsp;</h2>
 				</section>
@@ -299,11 +299,11 @@
 					<h2>Single-Threaded</h2>
 
 					<pre><code class="perl" data-noescape>
-						use Crypt::Bcrypt;
-						my @passes = rand.Str xx 32;
+ use Crypt::Bcrypt;
+ my @passes = rand.Str xx 32;
 
-						my @hashes = @passes.map: { bcrypt-hash $^pass, :15rounds };
-						say @hashes;
+ my @hashes = @passes.map: {bcrypt-hash $^pass, :15rounds};
+ say @hashes;
 					</code></pre>
 				</section>
 
@@ -311,11 +311,11 @@
 					<h2>Multi-Threaded</h2>
 
 					<pre><code class="perl" data-noescape>
-						use Crypt::Bcrypt;
-						my @passes = rand.Str xx 32;
+ use Crypt::Bcrypt;
+ my @passes = rand.Str xx 32;
 
-						my @hashes = @passes<mark>.race</mark>.map: { bcrypt-hash $^pass, :15rounds };
-						say @hashes;
+ my @hashes = @passes<mark>.race</mark>.map: {bcrypt-hash $^pass, :15rounds};
+ say @hashes;
 					</code></pre>
 				</section>
 
@@ -326,7 +326,8 @@
         </section>
 
 				<section>
-        	<h2 style="font-size: 400%">This is a hyper operator: »</h2>
+        	<h2 style="font-size: 400%">This is a hyper<br> operator:
+				<span style="font-family: 'Courier New', Arial">»</span></h2>
 
 					<pre><code class="perl" data-noescape>
 						@bunch-of-things<mark>»</mark>.call-this-method-on-every-item;
@@ -353,6 +354,15 @@
 				</section>
 
 				<section>
+					<h2>But what about all of our cores?</h2>
+
+					<pre><code class="perl" data-noescape>
+						use Crypt::Bcrypt;
+						say (rand.Str xx 32)».&amp;bcrypt-hash: :15rounds;
+					</code></pre>
+				</section>
+
+				<section>
 					<h2>
 							2016: Single-Threaded<br>
 							2018: Auto-Threaded
@@ -369,8 +379,11 @@
 				<section>
 					<h2 style="font-size: 370%">There's more cool concurrency stuff</h2>
 
-					<h2>Promises. Supplies. Channels. Junctions. Feeds.</h2>
-					<h2 style="font-size: 270%">All standard Perl 6!</h2>
+					<h2>Promises. Supplies. Channels.
+						<br>Junctions. Feeds.</h2>
+					<h2 style="font-size: 270%">All part of the language!
+						<br>
+						<small>(no modules)</small></h2>
 				</section>
 
 				<section>
