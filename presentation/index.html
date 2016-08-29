@@ -64,13 +64,314 @@
 					<p style="padding-top: 60px;"><small style="opacity: .4">(Use left/right arrows to navigate
 						the slides)</small></p>
 				</section>
-                <section>
-                    <h2>Thank You!</h2>
 
-                    <p></p>
-                </section>
+				<section>
+					<h2>Hash Some Passwords</h2>
+
+					<pre><code class="perl">
+						use Crypt::Bcrypt;
+						my @passes = rand.Str xx 32;
+
+						my @hashes;
+						for @passes {
+						    @hashes.push: bcrypt-hash $^pass, :15rounds;
+						}
+						say @hashes;
+					</code></pre>
+					<h2>&nbsp;</h2>
+				</section>
+
+				<section>
+					<h2>Hash Some Passwords</h2>
+
+					<pre><code class="perl">
+						use Crypt::Bcrypt;
+						my @passes = rand.Str xx 32;
+
+						my @hashes;
+						for @passes {
+						    @hashes.push: bcrypt-hash $^pass, :15rounds;
+						}
+						say @hashes;
+					</code></pre>
+					<h2>Takes 63 seconds to run</h2>
+				</section>
+
+				<section>
+					<img src="core.jpg">
+					<img src="core.jpg">
+					<img src="core.jpg">
+					<img src="core.jpg">
+
+					<h2>My Home Computer = 4 cores</h2>
+
+					<p><img src="cat-computer.jpg" alt=""></p>
+				</section>
+
+				<section>
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+
+					<h2>$3,379 = 14 cores</h2>
+
+					<p><img src="core-14.jpg" alt=""></p>
+				</section>
+
+				<section>
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50"><br>
+
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+					<img src="core.jpg" width="50">
+
+					<h2>Google Compute Engine = 32 cores</h2>
+					<p><img src="gce-cpus.png" alt=""></p>
+				</section>
+
+				<section>
+					<img src="many-cores.jpg" alt="">
+
+					<h2>Princeton University = 200,000 cores</h2>
+
+					<p><img src="cpu200000.jpg" alt=""></p>
+
+					<p><small>(source: <a href="http://www.pcworld.com/article/3111693/hardware/open-source-25-core-chip-can-be-stringed-into-a-200000-core-computer.html">PC World</a>)</small></p>
+				</section>
+
+				<section>
+					<img src="core.jpg">
+					<h2>Program = 1 core</h2>
+
+					<pre><code class="perl">
+						use Crypt::Bcrypt;
+						my @passes = rand.Str xx 32;
+
+						my @hashes;
+						for @passes {
+						    @hashes.push: bcrypt-hash $^pass, :15rounds;
+						}
+						say @hashes;
+					</code></pre>
+				</section>
+
+				<section>
+        	<h2 style="font-size: 400%">WHY?</h2>
+
+          <img src="why.jpg" alt="">
+        </section>
+
+				<section>
+					<img src="too-hard.jpg" alt="">
+        </section>
+
+				<section>
+        	<h2 style="font-size: 400%">How Many Extra Lines of Code, to make our program multi-threaded?</h2>
+
+          <p style="font-size: 170%"></p>
+        </section>
+
+				<section>
+					<h2 style="font-size: 400%; line-height: .7em">
+						<span style="font-size: 60%">There's</span><br>
+						<span style="font-size: 120%; line-height: .9em"
+							>NO LANGUAGE on the planet</span><br>
+						<span style="font-size: 60%">that can do better</span><br>
+						than Perl 6
+					</h2>
+        </section>
+
+				<section>
+					<h2 style="font-size: 400%; line-height: .7em">
+						<span style="font-size: 60%">We need</span><br>
+						<span style="font-size: 180%; line-height: .9em"
+							>ZERO</span><br>
+						<span style="font-size: 60%">extra lines of code</span><br>
+						<span style="font-size: 40%;">&nbsp;</span>
+					</h2>
+        </section>
+
+				<section>
+					<h2 style="font-size: 400%; line-height: .7em">
+						<span style="font-size: 60%">We need</span><br>
+						<span style="font-size: 180%; line-height: .9em"
+							>ZERO</span><br>
+						<span style="font-size: 60%">extra lines of code</span><br>
+						<span style="font-size: 40%; border-top: 1px solid #333">only <u>two</u> <i>words</i></span>
+					</h2>
+				</section>
+
+				<section>
+					<h2>Multi-Threaded</h2>
+
+					<pre><code class="perl" data-noescape>
+						use Crypt::Bcrypt;
+						my @passes = rand.Str xx 32;
+
+						my @hashes;
+						for @passes {
+						    @hashes.push: <mark>start</mark> bcrypt-hash $^pass, :15rounds;
+						}
+						say <mark>await</mark> @hashes;
+					</code></pre>
+				</section>
+
+				<section>
+					<p>(actual test runs)</p>
+					<h2>Original: 63 seconds to run</h2>
+					<h2>4-cores: 18 seconds to run</h2>
+					<h2>32-cores: 3.1 seconds to run</h2>
+					<hr>
+					<h2 style="font-size: 300%"
+						>2,000% faster with just<br> 2 extra words of code</h2>
+
+				</section>
+
+				<section>
+        	<h2 style="font-size: 300%">But Wait, There's More!</h2>
+
+          <img src="shocked.jpg" alt="">
+        </section>
+
+				<section>
+					<h2>Rewrite To Be Shorter</h2>
+
+					<pre><code class="perl">
+						use Crypt::Bcrypt;
+						my @passes = rand.Str xx 32;
+
+						my @hashes;
+						for @passes {
+						    @hashes.push: bcrypt-hash $^pass, :15rounds;
+						}
+						say @hashes;
+					</code></pre>
+					<h2>&nbsp;</h2>
+				</section>
+
+				<section>
+					<h2>Single-Threaded</h2>
+
+					<pre><code class="perl" data-noescape>
+						use Crypt::Bcrypt;
+						my @passes = rand.Str xx 32;
+
+						my @hashes = @passes.map: { bcrypt-hash $^pass, :15rounds };
+						say @hashes;
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Multi-Threaded</h2>
+
+					<pre><code class="perl" data-noescape>
+						use Crypt::Bcrypt;
+						my @passes = rand.Str xx 32;
+
+						my @hashes = @passes<mark>.race</mark>.map: { bcrypt-hash $^pass, :12rounds };
+						say @hashes;
+					</code></pre>
+				</section>
+
+				<section>
+        	<h2 style="font-size: 400%">But Wait, There's EVEN More!</h2>
+
+          <img src="crowd-surprised.jpg" alt="">
+        </section>
+
+				<section>
+        	<h2 style="font-size: 400%">This is a hyper operator: »</h2>
+
+					<pre><code class="perl" data-noescape>
+						@bunch-of-things<mark>»</mark>.call-this-method-on-every-item;
+					</code></pre>
+        </section>
+
+				<section>
+					<h2>
+							2016: Single-Threaded<br>
+							2018: Auto-Threaded
+					</h2>
+
+					<pre><code class="perl" data-noescape>
+						use Crypt::Bcrypt;
+						my @passes = rand.Str xx 32;
+						say @passes».&bcrypt-hash: :12rounds;
+					</code></pre>
+
+					<p>Let the compiler figure this stuff out.</p>
+				</section>
+
+				<section>
+					<h2 style="font-size: 370%">There's more cool concurrency stuff</h2>
+
+					<ul style="font-size: 130%">
+						<li>Promises</li>
+						<li>Supplies</li>
+						<li>Channels</li>
+						<li>Junctions</li>
+						<li>Feeds</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2 style="font-size: 370%">Check it out today</h2>
+
+					<h2 style="font-size: 370%"><a href="http://perl6.org">perl6.org</a></h2>
+
+					<img src="camelia-logo.png" alt="" style="box-shadow: none">
+
+					<hr>
+
+					<p style="font-size: 170%">Thank you!</p>
+				</section>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>

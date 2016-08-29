@@ -6,6 +6,10 @@
     background: none;
 }
 
+img {
+    border: none!important;
+}
+
 .push {
     margin-top: 20px!important;
 }
@@ -22,6 +26,7 @@ code {
     padding: 0 10px 3px!important;
     color: #384E55;
     border-radius: 5px;
+    font-size: 110%!important;
 }
 
 
