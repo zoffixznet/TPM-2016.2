@@ -335,7 +335,7 @@
 				<span style="font-family: 'Courier New', Arial">»</span></h2>
 
 					<pre><code class="perl" data-noescape>
-						@bunch-of-things<mark>»</mark>.call-this-method-on-every-item;
+	@bunch-of-things<mark>»</mark>.call-this-method-on-every-item;
 					</code></pre>
         </section>
 
@@ -343,9 +343,9 @@
 					<h2>Make it shorter!</h2>
 
 					<pre><code class="perl" data-noescape>
-						use Crypt::Bcrypt;
-						my @passes = rand.Str xx 32;
-						say @passes».&amp;bcrypt-hash: :15rounds;
+	use Crypt::Bcrypt;
+	my @passes = rand.Str xx 32;
+	say @passes».&amp;bcrypt-hash: :15rounds;
 					</code></pre>
 				</section>
 
@@ -353,8 +353,8 @@
 					<h2>SHRTR!</h2>
 
 					<pre><code class="perl" data-noescape>
-						use Crypt::Bcrypt;
-						say (rand.Str xx 32)».&amp;bcrypt-hash: :15rounds;
+	use Crypt::Bcrypt;
+	say (rand.Str xx 32)».&amp;bcrypt-hash: :15rounds;
 					</code></pre>
 				</section>
 
@@ -362,8 +362,8 @@
 					<h2>But what about all of our cores?</h2>
 
 					<pre><code class="perl" data-noescape>
-						use Crypt::Bcrypt;
-						say (rand.Str xx 32)».&amp;bcrypt-hash: :15rounds;
+	use Crypt::Bcrypt;
+	say (rand.Str xx 32)».&amp;bcrypt-hash: :15rounds;
 					</code></pre>
 				</section>
 
@@ -374,8 +374,8 @@
 					</h2>
 
 					<pre><code class="perl" data-noescape>
-						use Crypt::Bcrypt;
-						say (rand.Str xx 32)».&amp;bcrypt-hash: :15rounds;
+	use Crypt::Bcrypt;
+	say (rand.Str xx 32)».&amp;bcrypt-hash: :15rounds;
 					</code></pre>
 
 					<p>Let the compiler figure this stuff out.</p>
